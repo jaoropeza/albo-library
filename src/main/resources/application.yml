@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: AlboLibraryApp
+albo:
+    marvel:
+        public-key: 4adcbbb52fbdda57d0aac3faefb3bfdf
+        private-key: 852437e6e5592218af4c9431dfc085d5b8ea9961
