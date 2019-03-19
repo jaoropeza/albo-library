@@ -48,9 +48,6 @@ public class AlboLibraryApplication {
             serverPort,
             contextPath,
             env.getActiveProfiles());
-
-        SpringApplication.run(AlboLibraryApplication.class, args);
-
     }
 
 }
