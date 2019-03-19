@@ -3,3 +3,10 @@ spring:
         mongodb:
             host: localhost
             database: AlboLibraryApp
+server:
+    port: 8080
+
+albo:
+    marvel:
+        sync:
+            cron: '0 */30 * * * *'
