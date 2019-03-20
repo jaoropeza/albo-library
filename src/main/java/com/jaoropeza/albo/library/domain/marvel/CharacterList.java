@@ -28,7 +28,7 @@ public class CharacterList {
     @JsonProperty("collectionURI")
     private String collectionURI = null;
     @JsonProperty("items")
-    private java.util.List items = null;
+    private java.util.List<CharacterSummary> items = null;
     @JsonProperty("returned")
     private Integer returned = null;
 
@@ -89,7 +89,7 @@ public class CharacterList {
         this.collectionURI = collectionURI;
     }
 
-    public CharacterList items(java.util.List items) {
+    public CharacterList items(java.util.List<CharacterSummary> items) {
         this.items = items;
         return this;
     }
@@ -100,11 +100,11 @@ public class CharacterList {
      * @return items
      **/
     @ApiModelProperty(value = "The list of returned characters in this collection.")
-    public java.util.List getItems() {
+    public java.util.List<CharacterSummary> getItems() {
         return items;
     }
 
-    public void setItems(java.util.List items) {
+    public void setItems(java.util.List<CharacterSummary> items) {
         this.items = items;
     }
 
