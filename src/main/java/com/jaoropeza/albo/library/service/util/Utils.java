@@ -3,6 +3,8 @@ package com.jaoropeza.albo.library.service.util;
 import org.springframework.util.DigestUtils;
 
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +15,16 @@ public final class Utils {
 
     private static final String PRIVATE_KEY = "852437e6e5592218af4c9431dfc085d5b8ea9961";
     private static final String PUBLIC_KEY = "4adcbbb52fbdda57d0aac3faefb3bfdf";
+    public static Map<String, String> characters;
+
+    /**
+     * TODO: Enviar a DB
+     */
+    static {
+        characters = new HashMap<>();
+        characters.put("ironman", "1009368");
+        characters.put("capamerica", "1009220");
+    }
 
     /**
      * Genera el parámetro <code>hash</code> utilizando la llave pública y privada y un time instant
@@ -41,5 +53,12 @@ public final class Utils {
         key.put("apikey", PUBLIC_KEY);
         key.put("hash", hash);
         return key;
+    }
+
+    public static String formatInstant(Instant instant) {
+        return DateTimeFormatter
+            .ofPattern("dd/MM/yyyy HH:mm:ss")
+            .withZone(ZoneId.systemDefault())
+            .format(instant);
     }
 }
