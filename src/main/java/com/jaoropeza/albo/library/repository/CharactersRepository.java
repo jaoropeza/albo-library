@@ -1,11 +1,9 @@
 package com.jaoropeza.albo.library.repository;
 
-import com.jaoropeza.albo.library.domain.Colaborators;
+import com.jaoropeza.albo.library.domain.Characters;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
 @Repository
-public interface ColaboratorsRepository extends MongoRepository<Colaborators, String> {
+public interface CharactersRepository extends MongoRepository<Characters, String> {
 }

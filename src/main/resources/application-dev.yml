@@ -1,12 +1,8 @@
 spring:
     data:
         mongodb:
+            port: 27017
             host: localhost
             database: AlboLibraryApp
 server:
     port: 8080
-
-albo:
-    marvel:
-        sync:
-            cron: '0 */30 * * * *'

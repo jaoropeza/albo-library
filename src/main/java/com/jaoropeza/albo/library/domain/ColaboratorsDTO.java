@@ -1,34 +1,21 @@
 package com.jaoropeza.albo.library.domain;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.Instant;
 import java.util.Set;
 
-@Document(collection = "colaborators")
-public class Colaborators {
-    @Field("colorist")
+public class ColaboratorsDTO {
+    @JsonProperty("colorist")
     private Set<String> colorist;
-    @Field("editors")
+    @JsonProperty("editors")
     private Set<String> editors;
-    @Id
-    private String id;
-    @Field("last_sync")
-    private Instant lastSync;
-    @Field("writers")
+    @JsonProperty("last_sync")
+    private String lastSync;
+    @JsonProperty("writers")
     private Set<String> writers;
 
-    public Colaborators() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public ColaboratorsDTO() {
     }
 
     public Set<String> getColorist() {
@@ -47,11 +34,11 @@ public class Colaborators {
         this.editors = editors;
     }
 
-    public Instant getLastSync() {
+    public String getLastSync() {
         return lastSync;
     }
 
-    public void setLastSync(Instant lastSync) {
+    public void setLastSync(String lastSync) {
         this.lastSync = lastSync;
     }
 

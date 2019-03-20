@@ -39,7 +39,7 @@ public interface MarvelClientProxy {
     CharacterDataWrapper getCharacters(@RequestParam Map<String, String> key);
 
     @RequestMapping(method = RequestMethod.GET, value = "/characters/{characterId}")
-    CharacterDataWrapper getCharactersById(@RequestParam Map<String, String> key, @PathVariable String characterId);
+    CharacterDataWrapper getCharactersById(@RequestParam Map<String, String> key, @PathVariable(value = "characterId") String characterId);
 
     @RequestMapping(method = RequestMethod.GET, value = "/comics")
     ComicDataWrapper getComics(@RequestParam Map<String, String> parameters);
