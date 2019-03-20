@@ -4,8 +4,15 @@ Aplicación que consulta la biblioteca de comics [Marvel](https://developer.marv
 
 ## Desarrollo
 
+```
+./mvnw -Pdev spring-boot:run
+```
 
 ## Producción
 
+```
+$ ./assemble.sh
+$ ./avengers.sh
+```
 
 ## Testing
